@@ -34,7 +34,7 @@ const App = () => {
                 </Row>
 
                 <Row className="mx-auto text-center p-2">
-                    <Col className="text-center p-2" xs lg={12}>
+                    <Col className=" mx-auto text-center p-2" xs lg={12}>
                         {
                             Booksarr?.length > 0
                                 ? (Booksarr?.length > 1

@@ -10,13 +10,10 @@ import Author from "./Author";
 const BookCard = ({ Book }) => {
   const [open, setOpen] = useState(false);
 
-  // if(Book.cover_i=="" )
-  // let  src = "https://blog.springshare.com/wp-content/uploads/2010/02/nc-md.gif";
   const src = `https://covers.openlibrary.org/b/id/${
-    Book.cover_id 
-    || Book.cover_i
+    Book.cover_id || Book.cover_i
   }-M.jpg`;
-  //const authorlink= `https://openlibrary.org&{authors.key}}`
+
   return (
     <div className="col-12 col-lg-4 mx-auto">
       <Card
@@ -31,13 +28,7 @@ const BookCard = ({ Book }) => {
               <ul>
                 {Book.authors?.length > 0
                   ? Book.authors.map((author) => {
-                      return (
-                        <li>
-                          {/* <Link to={"https://openlibrary.org" + author.key}> */}
-                          {author.name || author}
-                          {/* </Link> */}
-                        </li>
-                      );
+                      return <li>{author.name || author}</li>;
                     })
                   : Book.author_name?.length > 0
                   ? Book.author_name.map((author) => {
@@ -48,13 +39,11 @@ const BookCard = ({ Book }) => {
             </div>
             <div className="d-block">
               <span className="fw-bold">Publish Year:</span>
-              {Book.first_publish_year != "" && Book.first_publish_year}
+              {Book.first_publish_year != "" ? Book.first_publish_year : "NA"}
             </div>
-            {/* <div className="d-block">  <span className="fw-bold">ISBN:</span> {{availability:isbn}}</div>  */}
-            <img src={Book.cover_i && src || ncmd} />
-            {/* {open && <Author />} */}
+
+            <img src={Book.cover_i != "" ? src : ncmd} />
           </Card.Text>
-          {/* <Button variant="primary">Buy</Button> */}
         </Card.Body>
       </Card>
     </div>
