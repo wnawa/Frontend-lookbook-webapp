@@ -1,3 +1,13 @@
+# Project Idea
+
+This projects is a frontend website for the public https://openlibrary.org/ API
+where the user can search for books by book's Subject / Language / Age or formate
+I am in the process to create another phase for searching books by isbn and author name.
+
+# Project Technology
+
+The technology used is react version 18.2 with boorstrap and javascript.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
