@@ -25,16 +25,16 @@ const App = () => {
         <>
             <Container>
                 <Row className="mx-auto text-center p-2">
-
-                    <h1 className="h1 bg-gradient bg-dark text-white p-3">   Book Look</h1>
-                    <Nav onSearch={setSearchValue} />
-                    <Search setData={setBooksarr} />
-                    {/* Searchvalue={Searchvalue} onSearchValue={setSearchValue} onSearchType={setSearchType}></Search> */}
-
+                    <Col xs={12} className="text-center mx-auto">
+                        <h1 className="h1 bg-gradient bg-dark text-white p-3 ">   Book Look</h1>
+                        <Nav onSearch={setSearchValue} />
+                        <Search setData={setBooksarr} />
+                        {/* Searchvalue={Searchvalue} onSearchValue={setSearchValue} onSearchType={setSearchType}></Search> */}
+                    </Col>
                 </Row>
 
                 <Row className="mx-auto text-center p-2">
-                    <Col className=" mx-auto text-center p-2" xs lg={12}>
+                    <Col className=" mx-auto text-center p-2" >
                         {
                             Booksarr?.length > 0
                                 ? (Booksarr?.length > 1
@@ -58,7 +58,7 @@ const App = () => {
                 {/* Start of copyright section  */}
                 < hr />
                 <Row>
-                    <Col className="text-center p-2" xs lg={12}>
+                    <Col className="text-center p-2" xs={12} lg={12}>
                         &copy; Copyright website. All right reserved
                     </Col>
                 </Row>

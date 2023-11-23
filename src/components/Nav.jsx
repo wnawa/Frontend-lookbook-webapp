@@ -75,7 +75,7 @@ const Nav = ({ onSearch }) => {
             })}
           </DropdownButton>
 
-          <DropdownButton
+          {/* <DropdownButton
             className="p-1"
             title="Formate"
             id="dropdown-menu-Formate"
@@ -88,7 +88,7 @@ const Nav = ({ onSearch }) => {
                 </Dropdown.Item>
               );
             })}
-          </DropdownButton>
+          </DropdownButton> */}
         </ButtonGroup>
       </Col>
     </Row>

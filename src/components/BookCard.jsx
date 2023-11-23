@@ -15,7 +15,7 @@ const BookCard = ({ Book }) => {
   }-M.jpg`;
 
   return (
-    <div className="col-12 col-lg-4 mx-auto">
+    <div className="text-center col-12 col-lg-4 mx-auto">
       <Card
         className=" text-start ml-5 ms-1 m-2 text-wrap shadow"
         style={{ width: "15rem" }}
