@@ -1,26 +1,21 @@
-import react from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
+
 import Card from "react-bootstrap/Card";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import ncmd from "../assets/images/nc-md.gif";
-import Author from "./Author";
 
 const BookCard = ({ Book }) => {
-  const [open, setOpen] = useState(false);
-
   const src = `https://covers.openlibrary.org/b/id/${
     Book.cover_id || Book.cover_i
   }-M.jpg`;
 
   return (
-    <div className="text-center col-12 col-lg-4 mx-auto">
+    <div className="text-center col-12 col-lg-3 mx-auto">
       <Card
-        className=" text-start ml-5 ms-1 m-2 text-wrap shadow"
+        className="  ml-5 ms-1 m-2 text-wrap shadow"
         style={{ width: "15rem" }}
       >
-        <Card.Body>
+        <Card.Body className="text-start">
           <Card.Title className="fw-bold text-wrap">{Book.title}</Card.Title>
           <Card.Text>
             <div className="d-block">
@@ -39,10 +34,10 @@ const BookCard = ({ Book }) => {
             </div>
             <div className="d-block">
               <span className="fw-bold">Publish Year:</span>
-              {Book.first_publish_year != "" ? Book.first_publish_year : "NA"}
+              {Book.first_publish_year !== "" ? Book.first_publish_year : "NA"}
             </div>
 
-            <img src={Book.cover_i != "" ? src : ncmd} />
+            <img alt="Book Cover" src={Book.cover_i !== "" ? src : ncmd} />
           </Card.Text>
         </Card.Body>
       </Card>

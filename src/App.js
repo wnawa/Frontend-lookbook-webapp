@@ -9,13 +9,12 @@ import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// const API = "https://openlibrary.org";
-
+import glasses from "./assets/images/icons8-glasses-64.png";
 
 const App = () => {
 
     const [Booksarr, setBooksarr] = useState([]);
-    const [SearchType, setSearchType] = useState('subject');
+    // const [SearchType, setSearchType] = useState('subject');
     const [Searchvalue, setSearchValue] = useState('general');
 
     useEffect(() => { FetchService.bysubject(Searchvalue, setBooksarr) },
@@ -24,17 +23,26 @@ const App = () => {
     return (
         <>
             <Container>
-                <Row className="mx-auto text-center p-2">
-                    <Col xs={12} className="text-center mx-auto">
-                        <h1 className="h1 bg-gradient bg-dark text-white p-3 ">   Book Look</h1>
-                        <Nav onSearch={setSearchValue} />
-                        <Search setData={setBooksarr} />
-                        {/* Searchvalue={Searchvalue} onSearchValue={setSearchValue} onSearchType={setSearchType}></Search> */}
+                <Row >
+                    <Col xs={12} className="text-center ">
+                        <h1 className="h1 bg-gradient bg-dark text-white pb-3">
+                            Book L <img alt="logo" src={glasses} className="text-white align-baseline img-fluid" />  k
+                        </h1>
                     </Col>
                 </Row>
 
-                <Row className="mx-auto text-center p-2">
-                    <Col className=" mx-auto text-center p-2" >
+                <Row className="mx-auto text-center ">
+                    <Col xs={12} lg={6} className="float-start d-inline" >
+                        <Nav onSearch={ setSearchValue} />
+                    </Col>
+                    <Col  xs={12}  lg={6} className="float-end" >
+                        <Search setData={setBooksarr} />
+                    </Col>
+                </Row>
+
+
+                <Row  >
+                    <Col className=" " xs={12}>
                         {
                             Booksarr?.length > 0
                                 ? (Booksarr?.length > 1
@@ -42,7 +50,7 @@ const App = () => {
                                     </div>)
                                     : <BookCard Book={Booksarr[0]} />
                                 )
-                                : (Searchvalue != 'all' &&
+                                : (Searchvalue !== '' &&
 
                                     < Spinner className='mx-auto' animation="border" role="status">
                                         <span className="visually-hidden mx-auto">Loading...</span>
