@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import glasses from "./assets/images/icons8-glasses-64.png";
+import glasses from "./assets/images/blue-glasses-64.png";
 
 const App = () => {
 
@@ -22,27 +22,27 @@ const App = () => {
 
     return (
         <>
-            <Container>
+            <Container  className="mx-auto text-center ">
                 <Row >
                     <Col xs={12} className="text-center ">
-                        <h1 className="h1 bg-gradient bg-dark text-white pb-3">
+                        <h1 className="h1 bg-gradient bg-dark text-white pb-3 ">
                             Book L <img alt="logo" src={glasses} className="text-white align-baseline img-fluid" />  k
                         </h1>
                     </Col>
                 </Row>
 
                 <Row className="mx-auto text-center ">
-                    <Col xs={12} lg={6} className=" d-flex justify-content-between" >
+                    <Col xs={12} lg={6} className="text-center d-flex justify-lg-content-between" >
                         <Nav onSearch={ setSearchValue} />
                     </Col>
-                    <Col  xs={12}  lg={6} className="d-flex flex-row-reverse" >
+                    <Col  xs={12}  lg={6} className="text-center d-flex flex-lg-row-reverse " >
                         <Search setData={setBooksarr} />
                     </Col>
                 </Row>
 
 
                 <Row  >
-                    <Col className=" " xs={12}>
+                    <Col className=" mx-auto text-center" xs={12}>
                         {
                             Booksarr?.length > 0
                                 ? (Booksarr?.length > 1
