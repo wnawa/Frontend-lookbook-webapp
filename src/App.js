@@ -32,10 +32,10 @@ const App = () => {
                 </Row>
 
                 <Row className="mx-auto text-center ">
-                    <Col xs={12} lg={6} className="float-start d-inline" >
+                    <Col xs={12} lg={6} className=" d-flex justify-content-between" >
                         <Nav onSearch={ setSearchValue} />
                     </Col>
-                    <Col  xs={12}  lg={6} className="float-end" >
+                    <Col  xs={12}  lg={6} className="d-flex flex-row-reverse" >
                         <Search setData={setBooksarr} />
                     </Col>
                 </Row>
