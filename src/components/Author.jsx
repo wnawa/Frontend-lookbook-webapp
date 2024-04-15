@@ -28,7 +28,6 @@ const Author = ({ Author }) => {
           </div>
           <img src={src} />
         </Card.Text>
-        {/* <Button variant="primary">Show Work</Button> */}
       </Card.Body>
     </Card>
   );

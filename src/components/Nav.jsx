@@ -33,12 +33,9 @@ const Nav = ({ onSearch }) => {
           "History",
           "Kids",
           "Mystery",
-
           "Politics",
-
           "Religion",
           "Science",
-
           "Thriller",
           "Women",
         ].map((subject) => {
@@ -80,21 +77,6 @@ const Nav = ({ onSearch }) => {
           );
         })}
       </DropdownButton>
-
-      {/* <DropdownButton
-            className="p-1"
-            title="Formate"
-            id="dropdown-menu-Formate"
-            onSelect={handleSelect}
-          >
-            {["E-Book", "Text"].map((Formate) => {
-              return (
-                <Dropdown.Item eventKey={Formate} href="#">
-                  {Formate}
-                </Dropdown.Item>
-              );
-            })}
-          </DropdownButton> */}
     </ButtonGroup>
   );
 };

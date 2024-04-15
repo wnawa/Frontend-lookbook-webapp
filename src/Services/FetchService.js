@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 const API = "https://openlibrary.org";
-
-
   export const FetchService={
-
-
   //Retreive a book by Author
   // const byAuthor = async (Authorname = '9780140328721') => {
   //   //  const href=`https://openlibrary.org/search/authors.json?q=${author.key}}`
@@ -19,12 +15,11 @@ const API = "https://openlibrary.org";
   // }
   //Retreive a book by title
   async bytitle(title = 'lord of the rigns',setData){
-    //"https://openlibrary.org/search.json?q=the+lord+of+the+rings";
-    
+
     await  fetch( `${API}/search.json?q=${title}`)
     .then(res=>res.json())
     .then(data=> setData(data.docs))
-    //fetchdata(URL);
+
   },
     // //Retreive an array of books by subject
   async bysubject(subject = 'general',setData){
@@ -32,10 +27,9 @@ const API = "https://openlibrary.org";
     await  fetch(`${API}/subjects/${subject.toLowerCase()}.json?details=true`)
     .then(res=>res.json())
     .then(data=> setData(data.works))
-    //fetchdata(URL);
+
   },
 
   
 };
 
-// export default FetchService;

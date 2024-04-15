@@ -10,18 +10,6 @@ const Search = ({ setData }) => {
 
   return (
     <ButtonGroup className="btn-group " aria-label="search group">
-      {/* <Form>
-            {["Author", "BookTitle"].map((type) => (
-              <Form.Check
-                inline
-                type="radio"
-                id={`radio-${type}`}
-                name="group1"
-                label={type}
-                onClick={()=> onSearchType(type)}
-              />
-            ))}
-          </Form> */}
       <input
         type="text"
         role="searchbox"
@@ -31,7 +19,7 @@ const Search = ({ setData }) => {
         className=""
       ></input>
       <Button
-       role="searchbutton"
+        role="searchbutton"
         className="btn btn-white "
         onClick={() => FetchService.bytitle(SearchText, setData)}
       >
