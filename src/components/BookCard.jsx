@@ -1,4 +1,4 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import Card from "react-bootstrap/Card";
 
@@ -12,7 +12,7 @@ const BookCard = ({ Book }) => {
   return (
     <div className="text-center col-12 col-lg-3 mx-auto">
       <Card
-        className="  ml-5 ms-1 m-2 text-wrap shadow"
+        className=" m-2 text-wrap shadow"
         style={{ width: "15rem" }}
       >
         <Card.Body className="text-start">

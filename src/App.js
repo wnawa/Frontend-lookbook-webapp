@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { FetchService } from "./Services/FetchService";
 import BookCard from "./components/BookCard";
 import Search from "./components/Search";
@@ -14,7 +14,6 @@ import glasses from "./assets/images/blue-glasses-64.png";
 const App = () => {
 
     const [Booksarr, setBooksarr] = useState([]);
-    // const [SearchType, setSearchType] = useState('subject');
     const [Searchvalue, setSearchValue] = useState('general');
 
     useEffect(() => { FetchService.bysubject(Searchvalue, setBooksarr) },
@@ -22,20 +21,20 @@ const App = () => {
 
     return (
         <>
-            <Container  className="mx-auto text-center ">
+            <Container className="mx-auto text-center ">
                 <Row >
                     <Col xs={12} className="text-center ">
-                        <h1 className="h1 bg-gradient bg-dark text-white pb-3 ">
+                        <h1 role="Logo" className="h1 bg-gradient bg-dark text-white pb-3 ">
                             Book L <img alt="logo" src={glasses} className="text-white align-baseline img-fluid" />  k
                         </h1>
                     </Col>
                 </Row>
 
                 <Row className="mx-auto text-center ">
-                    <Col xs={12} lg={6} className="text-center d-flex justify-lg-content-between" >
-                        <Nav onSearch={ setSearchValue} />
+                    <Col xs={12} lg={6} className="text-center d-flex" >
+                        <Nav onSearch={setSearchValue} />
                     </Col>
-                    <Col  xs={12}  lg={6} className="text-center d-flex flex-lg-row-reverse " >
+                    <Col xs={12} lg={6} className="text-center d-flex flex-lg-row-reverse " >
                         <Search setData={setBooksarr} />
                     </Col>
                 </Row>

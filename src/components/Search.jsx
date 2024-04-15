@@ -24,12 +24,14 @@ const Search = ({ setData }) => {
           </Form> */}
       <input
         type="text"
+        role="searchbox"
         value={SearchText}
         placeholder="Author,Title"
         onChange={(e) => setSearchText(e.target.value)}
         className=""
       ></input>
       <Button
+       role="searchbutton"
         className="btn btn-white "
         onClick={() => FetchService.bytitle(SearchText, setData)}
       >
